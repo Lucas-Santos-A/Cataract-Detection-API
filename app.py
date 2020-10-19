@@ -24,9 +24,6 @@ UPLOAD_FOLDER = os.path.join(os.curdir,"Imagem")
 ALLOWED_EXTENSIONS = set(['png'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route("/", methods=['POST'])
-@cross_origin()
-
 @app.route('/predict', methods=['POST'])
 @cross_origin()
 def predict():
