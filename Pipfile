@@ -1,13 +1,16 @@
 [[source]]
-
-url = "https://pypi.python.org/simple"
+name = "pypi"
+url = "https://pypi.org/simple"
 verify_ssl = true
 
+[dev-packages]
 
 [packages]
-
-Flask = "*"
+flask = "*"
+pickle-mixin = "*"
+flask-cors = "*"
+opencv-python = "*"
+scikit-image = "*"
 
 [requires]
-
-python_version = "3.6"
+python_version = "3.8"

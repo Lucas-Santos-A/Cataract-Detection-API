@@ -4,7 +4,6 @@ from random import randint
 from flask_cors import CORS, cross_origin
 
 import cv2
-from PIL.Image import Image
 from flask import Flask, request, jsonify
 from skimage import feature
 import numpy as np
