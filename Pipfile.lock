@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c48ac401dd1410ddace6a1247988497ca33123d56d90c09d05ad3af666bb461b"
+            "sha256": "3e3737e060d096a85b914abe0dbc4d5b9ba66c2dfa3fdc6442ae6eee3f580829"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -110,13 +110,6 @@
             ],
             "index": "pypi",
             "version": "==1.1.0"
-        },
-        "javabridge": {
-            "hashes": [
-                "sha256:bbb57f71356738f46dd34648f562047755c369f4a64dcfab92d5c7e2a97718aa"
-            ],
-            "index": "pypi",
-            "version": "==1.0.19"
         },
         "jinja2": {
             "hashes": [
@@ -383,20 +376,6 @@
             ],
             "index": "pypi",
             "version": "==2.8.1"
-        },
-        "python-weka-wrapper": {
-            "hashes": [
-                "sha256:60968a9f355020f9696ab2587f0dd3b44145c3aadb111bd7f66ff6ae1c230d61"
-            ],
-            "index": "pypi",
-            "version": "==0.3.18"
-        },
-        "python-weka-wrapper3": {
-            "hashes": [
-                "sha256:a022838bf33f84d0fd8d3d3d8178b6507c2df0e51a2b7d75135deacb6be611d1"
-            ],
-            "index": "pypi",
-            "version": "==0.1.14"
         },
         "pytz": {
             "hashes": [
