@@ -232,7 +232,7 @@
                 "sha256:fdf017c5b93d58ad77e2690e59322fd09414705c28d69b52fad4a19985422e6c"
             ],
             "index": "pypi",
-            "version": "*"
+            "version": "4.4.0.44"
         },
         "pickle-mixin": {
             "hashes": [
