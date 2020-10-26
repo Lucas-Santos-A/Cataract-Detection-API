@@ -47,12 +47,17 @@ def predict():
 
         # img = cv2.resize(image, (800, 800))
         gray = cv2.cvtColor(imArray, cv2.COLOR_BGR2GRAY)
-        hist = describe(24,3,gray)
+        hist = describe(24,8,gray)
 
+        predictProba = model.predict_proba(hist.reshape(1, -1))
         predict = model.predict(hist.reshape(1, -1))
         os.remove(os.path.join(os.curdir,"Imagem",filename))
+        
+        class0 = predictProba[0][0]
+        class1 = predictProba[0][1]
+        
+    return jsonify(classe=predict[0], chanceCatarata=class0, chanceNormal=class1)
 
-    return jsonify(predict[0])
 
 def get_model():
     mainDir = os.getcwd()
@@ -84,4 +89,4 @@ def describe(numPoints, radius, image, eps=1e-7):
 
 if __name__== '__main__':
     port = int(os.environ.get("PORT", 9999))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='localhost', port=port)
