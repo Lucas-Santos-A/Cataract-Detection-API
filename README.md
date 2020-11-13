@@ -14,13 +14,11 @@ O projeto de diagnóstico de catarata através de imagens da retina foi desenvol
 - Lucas Santos
 - Paulo Henrique (https://github.com/Paulohz)
 
-Esta parte do projeto consiste no código que irá fazer a extração das caracteristicas utilizando o algoritmo LBP (Local Binary Pattern) e ao final gerando o modelo preditivo no formato .sav.
+Esta parte do projeto consiste na API que recebe as solicitações e retorna o diagnóstico.
 
-Uma API baseada neste modelo preditivo foi criada e está disponível no repositório (https://github.com/Lucas-Santos-A/Cataract-Detection-API). 
+Existe outro repositório com o código que irá fazer a extração das caracteristicas utilizando o algoritmo LBP (Local Binary Pattern) e ao final gerando o modelo preditivo no formato .sav. (https://github.com/Lucas-Santos-A/Cataract-Feature-Extraction)
 
 As imagens utilizadas neste projeto foram retiradas do seguinte link: https://www.kaggle.com/jr2ngb/cataractdataset
-
-Uma proporção de 70% de imagens para treino e 30% para testes foi utilizada.
 
 Uma aplicação WEB para consumir API citada acima pode ser acessada através do seguinte repositório (https://github.com/Paulohz/cataract-detection)
 
@@ -31,15 +29,30 @@ Uma aplicação WEB para consumir API citada acima pode ser acessada através do
 O projeto foi desenvolvido utilizando as seguintes tecnologias.
 
 - Python
+- Flask
 
 ---
 
 ## 📦 Como Baixar o Projeto
 
 ```bash
-$ git clone https://github.com/Lucas-Santos-A/Cataract-Feature-Extraction
+$ git clone https://github.com/Lucas-Santos-A/Cataract-Detection-API
 
-# Para executar o projeto recomendamos utilizar o PyCharm.
+# Instalar dependencias
+$ pip install -r requirements.txt
+
+# Substituir as linhas 90 até 93 do arquivo app.py pelo seguinte código 
+
+# if __name__== '__main__':
+    app.run("localhost", "9999", debug=True)
+
+# Isto garante que o código rodará localmente
+
+#Executar a aplicação
+$ py app.py
+
+# A aplicação possui somente o endpoint /predict. É necessário enviar uma solicitação POST contendo um MultipartForm com a imagem seguindo o formato:
+# image: (upload da imagem)
 
 ```
 
